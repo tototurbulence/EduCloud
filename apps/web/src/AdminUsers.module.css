@@ -1,0 +1,324 @@
+.panel {
+  width: min(100%, 78rem);
+  margin: 0 auto 1.25rem;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  border: 1px solid #dfe5ef;
+  border-radius: 1.1rem;
+  color: #172747;
+  background: #fff;
+  box-shadow: 0 0.75rem 2.5rem rgb(26 39 68 / 5%);
+}
+
+.heading,
+.searchForm,
+.accountCard,
+.accountActions,
+.credential,
+.credentialActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.heading {
+  align-items: end;
+  margin-bottom: 1.25rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.45rem;
+  color: #617394;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  letter-spacing: -0.03em;
+}
+
+.helper,
+.footnote {
+  max-width: 36rem;
+  margin: 0;
+  color: #596b86;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.createForm {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  border: 1px solid #e1e7f0;
+  border-radius: 0.85rem;
+  background: #f8fafd;
+}
+
+.createForm h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+  align-items: end;
+  gap: 0.75rem;
+}
+
+.field {
+  display: grid;
+  min-width: 0;
+  gap: 0.4rem;
+  color: #293c5c;
+  font-size: 0.86rem;
+  font-weight: 750;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-height: 2.7rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #c9d2e0;
+  border-radius: 0.6rem;
+  color: #172747;
+  background: #fff;
+  font: inherit;
+  font-weight: 400;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible,
+.dangerButton:focus-visible,
+.textButton:focus-visible,
+.loadMoreButton:focus-visible {
+  outline: 3px solid #75a9f6;
+  outline-offset: 2px;
+}
+
+.searchForm {
+  justify-content: flex-start;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.searchForm .field {
+  width: min(100%, 25rem);
+}
+
+.primaryButton,
+.secondaryButton,
+.dangerButton,
+.textButton,
+.loadMoreButton {
+  min-height: 2.65rem;
+  padding: 0.6rem 0.85rem;
+  border: 0;
+  border-radius: 0.65rem;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.primaryButton {
+  color: #fff;
+  background: #20477e;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: #173963;
+}
+
+.secondaryButton,
+.loadMoreButton {
+  color: #183967;
+  background: #e9eff8;
+}
+
+.dangerButton {
+  color: #8c2823;
+  background: #fff0ee;
+}
+
+.textButton {
+  color: #20477e;
+  background: transparent;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled,
+.dangerButton:disabled,
+.loadMoreButton:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
+.accountList {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.accountCard {
+  align-items: flex-start;
+  padding: 1rem;
+  border: 1px solid #e1e7f0;
+  border-radius: 0.8rem;
+}
+
+.accountIdentity {
+  min-width: 12rem;
+}
+
+.accountIdentity h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.accountIdentity p {
+  margin: 0.3rem 0 0.55rem;
+  color: #596b86;
+  overflow-wrap: anywhere;
+}
+
+.activeBadge,
+.disabledBadge,
+.pendingBadge {
+  display: inline-flex;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.activeBadge {
+  color: #1e4d39;
+  background: #e4f5eb;
+}
+
+.disabledBadge {
+  color: #7d302d;
+  background: #fff0ee;
+}
+
+.pendingBadge {
+  margin-left: 0.35rem;
+  color: #654c12;
+  background: #fff4d2;
+}
+
+.accountActions {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.accountActions .field {
+  min-width: 11rem;
+}
+
+.credential {
+  align-items: flex-end;
+  margin: 0 0 1rem;
+  padding: 1rem;
+  border: 1px solid #ead39c;
+  border-radius: 0.8rem;
+  background: #fff9e9;
+}
+
+.credential h3 {
+  margin: 0;
+  color: #654c12;
+  font-size: 0.98rem;
+}
+
+.credential p {
+  margin: 0.4rem 0 0.8rem;
+  color: #655b42;
+  line-height: 1.5;
+}
+
+.credential .field {
+  max-width: 30rem;
+}
+
+.credentialActions {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.credentialActions span {
+  flex-basis: 100%;
+  color: #596b86;
+  font-size: 0.84rem;
+}
+
+.loadMoreButton {
+  display: block;
+  margin: 1rem auto;
+}
+
+.emptyState,
+.loading {
+  color: #596b86;
+  line-height: 1.55;
+}
+
+.notice,
+.error {
+  margin: 0 0 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  line-height: 1.5;
+}
+
+.notice {
+  border: 1px solid #b5dfc5;
+  color: #1e4d39;
+  background: #eaf8ef;
+}
+
+.error {
+  border: 1px solid #f1c3c0;
+  color: #8c2823;
+  background: #fff4f3;
+}
+
+.footnote {
+  max-width: none;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 760px) {
+  .heading,
+  .accountCard,
+  .credential {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .accountActions,
+  .searchForm {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .searchForm .field,
+  .accountActions .field {
+    width: 100%;
+  }
+}

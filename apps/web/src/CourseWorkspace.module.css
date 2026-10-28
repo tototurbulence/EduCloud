@@ -1,0 +1,460 @@
+.page,
+.page * {
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  padding: clamp(1rem, 4vw, 3rem);
+  color: #172747;
+  background:
+    radial-gradient(circle at 8% 0%, rgb(105 147 226 / 13%), transparent 32rem),
+    #f2f5fa;
+}
+
+.header,
+.sectionHeading,
+.courseTitleRow,
+.resourceHeading,
+.formActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header {
+  width: min(100%, 78rem);
+  margin: 0 auto 1.5rem;
+  padding: 0.25rem 0 1.25rem;
+  border-bottom: 1px solid #d8e0ec;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  letter-spacing: -0.04em;
+}
+
+.headerDetail,
+.helper,
+.byline,
+.courseDescription,
+.contentDescription {
+  color: #596b86;
+  line-height: 1.6;
+}
+
+.headerDetail {
+  margin: 0.45rem 0 0;
+}
+
+.eyebrow {
+  margin: 0 0 0.45rem;
+  color: #617394;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.panel {
+  width: min(100%, 78rem);
+  margin: 0 auto 1.25rem;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  border: 1px solid #dfe5ef;
+  border-radius: 1.1rem;
+  background: #fff;
+  box-shadow: 0 0.75rem 2.5rem rgb(26 39 68 / 5%);
+}
+
+.sectionHeading {
+  align-items: end;
+  margin-bottom: 1.25rem;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  color: #172747;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  letter-spacing: -0.03em;
+}
+
+.helper {
+  max-width: 34rem;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 0.9rem;
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.75rem;
+}
+
+.metric {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid #dfe5ef;
+  border-radius: 0.75rem;
+  background: #fbfcfe;
+}
+
+.metricLabel,
+.metricDetail {
+  margin: 0;
+  color: #60708a;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.metricValue {
+  margin: 0.45rem 0;
+  color: #173967;
+  font-size: 1.7rem;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.metricDetail {
+  font-size: 0.75rem;
+}
+
+.courseCard {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1.15rem;
+  border: 1px solid #dfe5ef;
+  border-radius: 0.85rem;
+  background: #fff;
+}
+
+.courseTitleRow {
+  align-items: flex-start;
+}
+
+.courseTitleRow h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.statusBadge {
+  flex: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  color: #334866;
+  background: #edf2f8;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.courseDescription {
+  flex: 1;
+  margin: 0.75rem 0;
+  white-space: pre-wrap;
+}
+
+.byline {
+  margin: 0 0 0.9rem;
+  font-size: 0.82rem;
+}
+
+.actions,
+.formActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.primaryButton,
+.secondaryButton,
+.dangerButton,
+.loadMoreButton,
+.textButton,
+.removeButton {
+  min-height: 2.65rem;
+  padding: 0.6rem 0.85rem;
+  border: 0;
+  border-radius: 0.65rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.primaryButton {
+  color: #fff;
+  background: #20477e;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: #173963;
+}
+
+.secondaryButton,
+.loadMoreButton {
+  color: #183967;
+  background: #e9eff8;
+}
+
+.dangerButton {
+  color: #8c2823;
+  background: #fff0ee;
+}
+
+.textButton {
+  min-height: 2.2rem;
+  color: #20477e;
+  background: #eef3fb;
+}
+
+.removeButton {
+  min-height: 2.2rem;
+  color: #7c302d;
+  background: #fff4f3;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled,
+.dangerButton:disabled,
+.loadMoreButton:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible,
+.dangerButton:focus-visible,
+.loadMoreButton:focus-visible,
+.textButton:focus-visible,
+.removeButton:focus-visible,
+.field input:focus-visible,
+.field textarea:focus-visible,
+.field select:focus-visible {
+  outline: 3px solid #75a9f6;
+  outline-offset: 2px;
+}
+
+.courseForm,
+.formGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.formGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field {
+  display: grid;
+  min-width: 0;
+  gap: 0.4rem;
+  color: #293c5c;
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #c9d2e0;
+  border-radius: 0.6rem;
+  color: #172747;
+  background: #fff;
+  font: inherit;
+  font-weight: 400;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.moduleForm {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid #dfe5ef;
+  border-radius: 0.85rem;
+}
+
+.moduleForm legend {
+  padding: 0 0.4rem;
+  color: #27476f;
+  font-weight: 800;
+}
+
+.resourceHeading {
+  justify-content: flex-start;
+}
+
+.resourceHeading h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.resourceForm {
+  display: grid;
+  grid-template-columns: minmax(9rem, 1fr) minmax(8rem, 0.7fr) minmax(14rem, 2fr) auto;
+  align-items: end;
+  gap: 0.65rem;
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  background: #f6f8fb;
+}
+
+.resourceValue {
+  min-width: 0;
+}
+
+.formActions {
+  justify-content: flex-end;
+  margin-top: 0.15rem;
+}
+
+.loadMoreButton {
+  display: block;
+  margin: 1rem auto 0;
+}
+
+.emptyState,
+.loading,
+.mutedAction {
+  color: #596b86;
+  line-height: 1.55;
+}
+
+.emptyState {
+  margin: 0;
+}
+
+.mutedAction {
+  align-self: center;
+  font-size: 0.85rem;
+}
+
+.notice,
+.error {
+  width: min(100%, 78rem);
+  margin: 0 auto 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  line-height: 1.5;
+}
+
+.notice {
+  border: 1px solid #b5dfc5;
+  color: #1e4d39;
+  background: #eaf8ef;
+}
+
+.error {
+  border: 1px solid #f1c3c0;
+  color: #8c2823;
+  background: #fff4f3;
+}
+
+.moduleList {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contentModule {
+  padding: 1rem;
+  border: 1px solid #dfe5ef;
+  border-radius: 0.8rem;
+  background: #fbfcfe;
+}
+
+.contentModule h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.contentDescription {
+  margin: 0.65rem 0 0;
+  white-space: pre-wrap;
+}
+
+.resourceList {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0.8rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.resourceList li {
+  padding-left: 0.2rem;
+}
+
+.resourceList a {
+  display: block;
+  width: fit-content;
+  margin-top: 0.25rem;
+  color: #174d8a;
+  text-underline-offset: 0.15em;
+}
+
+.resourceText {
+  margin: 0.35rem 0 0;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.rosterList {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rosterList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #e1e7f0;
+  border-radius: 0.65rem;
+  color: #334866;
+}
+
+.rosterList li span {
+  color: #596b86;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 760px) {
+  .header,
+  .sectionHeading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .header {
+    gap: 1.1rem;
+  }
+
+  .formGrid,
+  .resourceForm {
+    grid-template-columns: 1fr;
+  }
+
+  .resourceForm .removeButton {
+    justify-self: start;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "educloud",
+  "version": "0.1.0",
+  "private": true,
+  "description": "EduCloud learning management platform",
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace @educloud/api",
+    "dev:web": "npm run dev --workspace @educloud/web",
+    "build": "npm run build --workspace @educloud/web",
+    "test": "npm run test --workspace @educloud/api && npm run test --workspace @educloud/web"
+  },
+  "devDependencies": {
+    "vite": "^7.3.7",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=24 <25",
+    "npm": ">=11 <12"
+  },
+  "allowScripts": {
+    "argon2@0.45.1": true,
+    "esbuild@0.28.2": true
+  }
+}
